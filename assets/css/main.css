@@ -662,25 +662,31 @@ h6 {
 #preloader:before {
   content: "";
   position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust the width of the image */
+  height: 100px; /* Adjust the height of the image */
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/sach-digital-solutions.appspot.com/o/Screenshot_2024-10-20_195210-removebg-preview.png?alt=media&token=5e0c7876-a403-49aa-878d-42292ff42cc2');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @keyframes animate-preloader {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+#preloader:before {
+  animation: animate-preloader 1.5s linear infinite;
+}
+
 
 /*--------------------------------------------------------------
 # Scroll Top Button
